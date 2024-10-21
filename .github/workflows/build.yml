@@ -2,9 +2,9 @@ name: Build and Deploy to Dev
 
 on:
   push:
-    branches: [ archima-warriors ]
+    branches: [ archima-warriors-cloudHub2.0 ]
   pull_request:
-    branches: [ archima-warriors ]
+    branches: [ archima-warriors-cloudHub2.0 ]
     
 jobs:
   build:
