@@ -38,7 +38,8 @@
 						<connectedAppGrantType>client_credentials</connectedAppGrantType>
 						<businessGroupId>${anypoint.businessGroup}</businessGroupId>
 						<environment>${env}</environment>
-						<Target>${anypoint.target}</Target>
+						<targetType>${anypoint.targetType}</targetType>
+						<targetName>${anypoint.targetName}</targetName>
 						<workers>1</workers>
 						<workerType>MICRO</workerType>
 						<properties>
