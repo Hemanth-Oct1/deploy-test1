@@ -61,6 +61,7 @@ jobs:
         Business_Group_Id: ${{ secrets.Business_Group_Id }}
         CLIENT_ID: ${{ secrets.CLIENT_ID }}
         CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+        PRIVATE_SPACE_ID: ${{ secret.PRIVATE_SPACE_ID }}
       run: |
         artifactName=$(ls *.jar | head -1)
         mvn deploy -DmuleDeploy \
@@ -71,5 +72,4 @@ jobs:
          -Danypoint.platform.client_id="$CLIENT_ID" \
          -Danypoint.platform.client_secret="$CLIENT_SECRET" \
          -Denv=Dev \
-         -Danypoint.targetType=CloudHub 2.0 \
-         -Danypoint.targetName=DemoSpace
+         -Danypoint.platform.private_space_id="$PRIVATE_SPACE_ID"
