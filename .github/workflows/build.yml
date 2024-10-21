@@ -71,4 +71,5 @@ jobs:
          -Danypoint.platform.client_id="$CLIENT_ID" \
          -Danypoint.platform.client_secret="$CLIENT_SECRET" \
          -Denv=Dev \
-         -Danypoint.target=DemoSpace
+         -Danypoint.targetType=CloudHub 2.0 \
+         -Danypoint.targetName=DemoSpace
