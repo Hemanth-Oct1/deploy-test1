@@ -61,7 +61,7 @@ jobs:
         Business_Group_Id: ${{ secrets.Business_Group_Id }}
         CLIENT_ID: ${{ secrets.CLIENT_ID }}
         CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
-        PRIVATE_SPACE_ID: ${{ secret.PRIVATE_SPACE_ID }}
+        PRIVATE_SPACE_ID: ${{ secrets.PRIVATE_SPACE_ID }}
       run: |
         artifactName=$(ls *.jar | head -1)
         mvn deploy -DmuleDeploy \
