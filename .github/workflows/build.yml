@@ -70,4 +70,5 @@ jobs:
          -Danypoint.businessGroup="$Business_Group_Id" \
          -Danypoint.platform.client_id="$CLIENT_ID" \
          -Danypoint.platform.client_secret="$CLIENT_SECRET" \
-         -Denv=Dev
+         -Denv=Dev \
+         -Danypoint.target=DemoSpace
