@@ -2,9 +2,9 @@ name: Build and Deploy to Dev
 
 on:
   push:
-    branches: [ main ]
+    branches: [ archima ]
   pull_request:
-    branches: [ main ]
+    branches: [ archima ]
     
 jobs:
   build:
