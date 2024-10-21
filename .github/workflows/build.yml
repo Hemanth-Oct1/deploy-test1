@@ -2,9 +2,9 @@ name: Build and Deploy to Dev
 
 on:
   push:
-    branches: [ archima ]
+    branches: [ archima-warriors ]
   pull_request:
-    branches: [ archima ]
+    branches: [ archima-warriors ]
     
 jobs:
   build:
@@ -58,6 +58,7 @@ jobs:
       env:
         USERNAME: ${{ secrets.CONNECTED_APP_CLIENT_ID }}
         PASSWORD: ${{ secrets.CONNECTED_APP_CLIENT_SECRET }}
+        Business_Group_Id: ${{ secrets.Business_Group_Id }}
         CLIENT_ID: ${{ secrets.CLIENT_ID }}
         CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
       run: |
@@ -66,6 +67,7 @@ jobs:
          -Dmule.artifact=$artifactName \
          -Danypoint.username="$USERNAME" \
          -Danypoint.password="$PASSWORD" \
+         -Danypoint.businessGroup="$Business_Group_Id" \
          -Danypoint.platform.client_id="$CLIENT_ID" \
          -Danypoint.platform.client_secret="$CLIENT_SECRET" \
          -Denv=Dev
