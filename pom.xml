@@ -4,7 +4,7 @@
 
 	<groupId>a62f6236-0b02-4e5f-a8eb-dc5e37aedb12</groupId>
 	<artifactId>cicd-pipeline-testing</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<packaging>mule-application</packaging>
 
 	<name>cicd-pipeline-test1</name>
@@ -37,7 +37,7 @@
 						<server>anypoint-exchange-v3</server>
 						<businessGroupId>${anypoint.businessGroup}</businessGroupId>
 						<environment>${env}</environment>
-						<target>Cloudhub-US-East-2</target>
+						<target>${anypoint.private_space_id}</target>
 						<applicationName>${appname}</applicationName>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
