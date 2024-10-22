@@ -64,8 +64,8 @@ jobs:
       run: |
         mvn deploy --settings .maven/settings.xml -DskipMunitTests -DmuleDeploy \
          -Dmule.artifact=$artifactName \
-         -Danypoint.username="$USERNAME" \
-         -Danypoint.password="$PASSWORD" \
+         -Dclient.id="$USERNAME" \
+         -Dclient.secret="$PASSWORD" \
          -Danypoint.businessGroup="$Business_Group_Id" \
          -Danypoint.platform.client_id="$CLIENT_ID" \
          -Danypoint.platform.client_secret="$CLIENT_SECRET" \
