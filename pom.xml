@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>a62f6236-0b02-4e5f-a8eb-dc5e37aedb12</groupId>
-	<artifactId>cicd-pipeline-test6</artifactId>
+	<artifactId>cicd-pipeline-test7</artifactId>
 	<version>1.0.0</version>
 	<packaging>mule-application</packaging>
 
@@ -35,9 +35,6 @@
 						<provider>MC</provider>
 						<muleVersion>4.4.0</muleVersion>
 						<server>anypoint-exchange-v3</server>
-						<connectedAppClientId>${anypoint.username}</connectedAppClientId>
-						<connectedAppClientSecret>${anypoint.password}</connectedAppClientSecret>
-						<connectedAppGrantType>client_credentials</connectedAppGrantType>
 						<businessGroupId>${anypoint.businessGroup}</businessGroupId>
 						<environment>${env}</environment>
 						<target>Cloudhub-US-East-2</target>
