@@ -4,7 +4,7 @@
 
 	<groupId>a62f6236-0b02-4e5f-a8eb-dc5e37aedb12</groupId>
 	<artifactId>cicd-pipeline-deploy</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<packaging>mule-application</packaging>
 
 	<name>cicd-pipeline-test1</name>
@@ -41,6 +41,16 @@
 						<applicationName>${appname}</applicationName>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
+						<deploymentSettings>
+        						<http>
+            							<inbound>
+                							<publicUrl>https://deploy-cloudhub2.sirichat.com</publicUrl>
+            							</inbound>
+        						</http>
+        						<lastMileSecurity>false</lastMileSecurity>
+        						<forwardSslSession>false</forwardSslSession>
+        						<generateDefaultPublicUrl>false</generateDefaultPublicUrl>
+    						</deploymentSettings>
 						<properties>
 							<anypoint.platform.client_id>${anypoint.platform.client_id}</anypoint.platform.client_id>
 							<anypoint.platform.client_secret>${anypoint.platform.client_secret}</anypoint.platform.client_secret>
