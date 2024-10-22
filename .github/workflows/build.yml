@@ -61,10 +61,8 @@ jobs:
         Business_Group_Id: ${{ secrets.Business_Group_Id }}
         CLIENT_ID: ${{ secrets.CLIENT_ID }}
         CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
-        PRIVATE_SPACE_ID: ${{ secrets.PRIVATE_SPACE_ID }}
       run: |
-        artifactName=$(ls *.jar | head -1)
-        mvn deploy -DmuleDeploy \
+        mvn deploy --settings .maven/settings.xml -DskipMunitTests -DmuleDeploy \
          -Dmule.artifact=$artifactName \
          -Danypoint.username="$USERNAME" \
          -Danypoint.password="$PASSWORD" \
@@ -72,4 +70,4 @@ jobs:
          -Danypoint.platform.client_id="$CLIENT_ID" \
          -Danypoint.platform.client_secret="$CLIENT_SECRET" \
          -Denv=Dev \
-         -Danypoint.private_space_id=19862246-181d-4267-8642-c8126da116f0
+         -Dappname=deploy-cloudhub2
