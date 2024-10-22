@@ -38,7 +38,7 @@
 						<connectedAppGrantType>client_credentials</connectedAppGrantType>
 						<businessGroupId>${anypoint.businessGroup}</businessGroupId>
 						<environment>${env}</environment>
-						<region>Cloudhub-US-East-2</region>
+						<target>{anypoint.private_space_id}</target>
 						<workers>1</workers>
 						<workerType>MICRO</workerType>
 						<properties>
