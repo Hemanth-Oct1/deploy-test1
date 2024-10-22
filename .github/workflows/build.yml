@@ -61,6 +61,7 @@ jobs:
         Business_Group_Id: ${{ secrets.Business_Group_Id }}
         CLIENT_ID: ${{ secrets.CLIENT_ID }}
         CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+        PRIVATE_SPACE_ID: ${{ secrets.PRIVATE_SPACE_ID }}
       run: |
         artifactName=$(ls *.jar | head -1)
         mvn deploy -DmuleDeploy \
@@ -70,4 +71,5 @@ jobs:
          -Danypoint.businessGroup="$Business_Group_Id" \
          -Danypoint.platform.client_id="$CLIENT_ID" \
          -Danypoint.platform.client_secret="$CLIENT_SECRET" \
-         -Denv=Dev 
+         -Denv=Dev \
+         -Danypoint.private_space_id="$PRIVATE_SPACE_ID"
