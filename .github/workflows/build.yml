@@ -72,4 +72,4 @@ jobs:
          -Danypoint.platform.client_id="$CLIENT_ID" \
          -Danypoint.platform.client_secret="$CLIENT_SECRET" \
          -Denv=Dev \
-         -Danypoint.private_space_id="$PRIVATE_SPACE_ID"
+         -Danypoint.private_space_id=19862246-181d-4267-8642-c8126da116f0
